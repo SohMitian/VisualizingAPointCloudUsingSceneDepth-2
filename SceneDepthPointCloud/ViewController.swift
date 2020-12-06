@@ -73,7 +73,7 @@ final class ViewController: UIViewController, ARSessionDelegate {
         // Create a world-tracking configuration, and
         // enable the scene depth frame-semantic.
         let configuration = ARWorldTrackingConfiguration()
-        configuration.frameSemantics = .sceneDepth
+        configuration.frameSemantics = .smoothedSceneDepth
 
         // Run the view's session
         session.run(configuration)

@@ -144,8 +144,8 @@ final class Renderer {
     }
     
     private func updateDepthTextures(frame: ARFrame) -> Bool {
-        guard let depthMap = frame.sceneDepth?.depthMap,
-            let confidenceMap = frame.sceneDepth?.confidenceMap else {
+        guard let depthMap = frame.smoothedSceneDepth?.depthMap,
+            let confidenceMap = frame.smoothedSceneDepth?.confidenceMap else {
                 return false
         }
         
